@@ -21,7 +21,7 @@ O design do aplicativo apresenta:
 
 ## Demonstração
 
-![Demo](demo.gif)
+![Alt text](image.png)
 
 ## Como usar
 
