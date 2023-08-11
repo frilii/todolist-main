@@ -1,0 +1,122 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    background: radial-gradient(ellipse at center, #1c1c1c 0%, #000000 100%);
+  }
+  
+  .container {
+    perspective: 1000px;
+  }
+  
+  .task-manager {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+  }
+  
+  .input-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+  }
+  
+  button#addTaskButton {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+  
+  button#addTaskButton:hover {
+    background-color: #0056b3;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+    perspective: inherit;
+    transform-style: preserve-3d;
+  }
+  
+  li {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  li:hover {
+    transform: translateX(10px);
+  }
+  
+  .delete-button,
+  .edit-button,
+  .move-button {
+    border: none;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 5px;
+    transition: color 0.3s;
+  }
+  
+  .delete-button:hover,
+  .edit-button:hover,
+  .move-button:hover {
+    color: #ff2b2b;
+  }
+  
+  .background-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+    background: linear-gradient(45deg, #0099ff, #ffcc00);
+    opacity: 0.5;
+    animation: animateBackground 10s infinite;
+  }
+  
+  @keyframes animateBackground {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 400% 0;
+    }
+  }
+  
